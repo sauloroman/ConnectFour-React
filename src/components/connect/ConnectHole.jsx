@@ -9,7 +9,7 @@ export const ConnectHole = ({ value, i, j }) => {
       className={`
         hole 
         ${ (value === 'Player1' || value === 'Player2') ? `hole--${value}` : 'hole--empty'}
-        ${ winnerMove?.includes(`${i}${j}`) && 'hole--winner animate__animated animate__pulse animate__infinite' }
+        ${ winnerMove?.includes(`${i}${j}`) && 'hole--winner animate__animated animate__rubberBand animate__delay-1s' }
       `}
     ></div>
   )

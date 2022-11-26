@@ -1,9 +1,11 @@
 import { useSelector } from "react-redux"
 
+import imagePlayer1 from '../../../assets/img/player-1.png';
+import imagePlayer2 from '../../../assets/img/player-2.png';
+
 export const ConnectScore = ({ type, player }) => {
   
   const { player1, player2 } = useSelector( store => store.players );
-  const imagePlayer = `../../../assets/img/player-${type}.png`
 
   const { name: namePlayer1, victories: victoriesPlayer1 } = player1;
   const { name: namePlayer2, victories: victoriesPlayer2 } = player2;
@@ -14,7 +16,7 @@ export const ConnectScore = ({ type, player }) => {
       <p className="connect__score-victories">{ player === 'JUG 1' ? victoriesPlayer1 : victoriesPlayer2 }</p>
       <img 
         className="connect__score-image"
-        src={imagePlayer} 
+        src={ type === "1" ? imagePlayer1 : imagePlayer2 } 
         alt="Image player" />
     </div>
   )
