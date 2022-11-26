@@ -1,0 +1,142 @@
+/* ######################################### */
+/* TABLETS 768px */
+/* ######################################### */
+
+@media ( min-width: 48em ) {
+  
+  html {
+    font-size: 62.5%;
+  }
+
+  body {
+    background-color: var(--bg-color-secondary);
+  }
+
+  /* LOGIN */
+  .login__container {
+    width: 60rem;
+    background-color: var(--bg-color-primary);
+    height: 80%;
+    padding: 5rem;
+    border-radius: 30px;
+    border: 5px solid var(--color-black);
+    box-shadow: 0 20px 1px var(--color-black);
+    transition: all .4s ease-out;
+  }
+
+  .connect__score {
+    flex-direction: row-reverse;
+    gap: 3rem;
+  }
+
+  .connect__score--1 .connect__score-image {
+    left: 6%;
+  }
+
+  .connect__score--2 .connect__score-image  {
+    right: -16%;
+  }
+
+  .connect {
+    margin: 0 auto;
+    width: 120rem;
+    max-width: 95%;
+    padding-bottom: 5rem;
+  }
+
+  .connect__header {
+    margin-bottom: 1rem;
+  }
+
+  .connect__score--2 .connect__score-image{
+    font-size: 1.8rem;
+  }
+
+  .connect__grid {
+    gap: 5rem;
+  }
+
+  .board__grid {
+    padding: 1.5rem;
+  }
+
+  .column {
+    padding: 0;
+  }
+
+  .hole {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .winner {
+    width: 60%;
+  }
+
+}
+
+/* ######################################### */
+/* TABLETS 912px */
+/* ######################################### */
+
+@media ( min-width: 75em ) {
+
+  .connect__button, .modal__button {
+    font-size: 1.6rem;
+  }
+
+  .connect {
+    padding: 1rem;
+    padding-bottom: 10rem;
+  }
+
+  .connect__logo {
+    width: 13rem;
+  }
+
+  .connect__header {
+    margin-bottom: 3rem;
+  }
+
+  .hole {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+
+  .connect__grid {
+    grid: 0;
+    grid-template-columns: 1fr 4fr;
+  }
+
+  .board__grid {
+    padding: 1rem;
+    grid-column: 2 / 3;
+  }
+
+  .winner,
+  .turn {
+    width: 30%;
+  }
+
+  .board {
+    margin: 0 auto;
+    width: 65rem;
+  }
+
+  .connect__score {
+    width: 35rem;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .connect__scoreContainer {
+    flex-direction: column;
+    justify-content: center;
+    gap: 5rem;
+  }
+
+  .winner__lettering {
+    font-size: 4rem;
+  }
+
+}
