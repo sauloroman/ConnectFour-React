@@ -1,5 +1,5 @@
 import { HashRouter, Navigate, Route, Routes } from "react-router-dom"
-import { LoginPage, RulesPage, ConnectPlayerVsCPUPage, ConnectPlayerVsPlayerPage } from "../pages"
+import { LoginPage, RulesPage, ConnectPlayGamePage } from "../pages"
 
 export const AppRouter = () => {
   return (
@@ -10,8 +10,7 @@ export const AppRouter = () => {
         <Route path="/rules" element={ <RulesPage /> }/>
 
         {/* PRIVATE ROUTES */}
-        <Route path="/connect/playervscpu" element={<ConnectPlayerVsCPUPage />} />
-        <Route path="/connect/player1vsplayer2" element={<ConnectPlayerVsPlayerPage />} />
+        <Route path="/connect/playGame" element={<ConnectPlayGamePage />} />
 
         <Route path="/*" element={ <Navigate to="/"/>} />
 

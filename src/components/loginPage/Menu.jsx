@@ -20,7 +20,7 @@ export const Menu = () => {
       <ul className="login__list">
         <li className="login__item login__item--pink animate__animated animate__fadeInRight">
           <button 
-            onClick={ () => onStartGame('cpu', '/connect/playervscpu') }
+            onClick={ () => onStartGame('cpu', '/connect/playGame') }
             className="login__link" 
             >JUGADOR vs CPU</button>
           <img 
@@ -31,7 +31,7 @@ export const Menu = () => {
         </li>
         <li className="login__item login__item--yellow animate__animated animate__fadeInLeft">
           <button 
-            onClick={ () => onStartGame('multiplayer', '/connect/player1vsplayer2') }
+            onClick={ () => onStartGame('multiplayer', '/connect/playGame') }
             className="login__link" 
             >JUGADOR 1 vs JUGADOR 2</button>
           <img 

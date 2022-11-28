@@ -1,9 +1,24 @@
+import { useEffect } from "react";
 import { useSelector } from "react-redux"
 import { ConnectColumn } from "./ConnectColumn";
+import { useMoves } from "../../hooks";
+import { moveCPU } from "../../helpers";
 
 export const ConnectBoard = () => {
 
-  const {board} = useSelector( store => store.board );
+  const {board, winner } = useSelector( store => store.board );
+  const activePlayer = useSelector( store => store.activePlayer );
+  const typeOfGame = useSelector( store => store.typeOfGame );
+  const { onRandomMove } = useMoves();
+
+  useEffect( () => {
+    if ( !winner ) {
+      if ( typeOfGame === 'cpu' && activePlayer === 'Player2' ) {
+        const bestColumn = moveCPU( board );
+        onRandomMove( bestColumn );
+      }
+    }
+  }, [activePlayer] )
   
   return (
     <div className="board animate__animated animate__bounceIn">

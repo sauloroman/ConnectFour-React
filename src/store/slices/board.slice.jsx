@@ -12,7 +12,6 @@ export const boardSlice = createSlice({
       ["05", "15", "25", "35", "45", "55", "65"],
       ["06", "16", "26", "36", "46", "56", "66"],
     ],
-    quantityOfMoves: 0,
     winner: null,
     winnerMove: [],
     tie: false 
@@ -255,14 +254,6 @@ export const boardSlice = createSlice({
       }
     },
 
-    addQuantityOfMoves: ( state, _action ) => {
-      return {
-        ...state,
-        quantityOfMoves: state.quantityOfMoves + 1
-      }
-
-    },
-
     determineTie: ( state, _action ) => {
 
       const newTie = state.board.every( row => (row[0] === 'Player1' || row[0] === 'Player2') );
@@ -285,7 +276,6 @@ export const boardSlice = createSlice({
           ["05", "15", "25", "35", "45", "55", "65"],
           ["06", "16", "26", "36", "46", "56", "66"],
         ],
-        quantityOfMoves: 0,
         winner: null,
         winnerMove: [],
         tie: false
@@ -298,7 +288,6 @@ export const {
   insertPiece, 
   resetBoard, 
   determineWinner, 
-  addQuantityOfMoves,
   determineTie
 } = boardSlice.actions;
 
